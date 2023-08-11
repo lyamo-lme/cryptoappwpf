@@ -1,0 +1,22 @@
+﻿<Window x:Class="TestTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTask"
+        xmlns:local1="clr-namespace:TestTask.Converter"
+        mc:Ignorable="d"
+        Title="CryptoCurrency" Width="1024" Height="823">
+    <Window.Resources>
+        <local1:CostConverter x:Key="CostConverter"></local1:CostConverter>
+        <local1:ColorConverter x:Key="ColorConverter"></local1:ColorConverter>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="Auto" MinHeight="31"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+           <Frame Margin="0 ,-30  ,0 ,0"  x:Name="MainFrame"  Grid.Row="1" Background="White" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:fc="clr-namespace:FancyCandles;assembly=FancyCandles"
+      xmlns:local="clr-namespace:TestTask.Frames"
+      xmlns:localr="clr-namespace:TestTask.Converter"
+      xmlns:TestTask="clr-namespace:TestTask" x:Class="TestTask.Frames.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage"
+      Background="White">
+    <Page.Resources>
+        <localr:CostConverter x:Key="CostConverter"></localr:CostConverter>
+        <localr:ColorConverter x:Key="ColorConverter"></localr:ColorConverter>
+    </Page.Resources>
+    <Grid x:Name="MainGrid"   >
+        <Frame  x:Name="MainFrame" Background="White" BorderBrush="Aqua"  NavigationUIVisibility="Hidden" Margin="0,21,0,0"/>
+        <Button x:Name="BackMenuButton" Content="Main Page" HorizontalAlignment="Left" Visibility="Visible" Click="ToTableFrame" Width="75" Height="20" VerticalAlignment="Top"/>
+        <Button x:Name="ConvertorMenuButton" Content="Convertor" HorizontalAlignment="Left" Margin="80,0,0,0" VerticalAlignment="Top" Visibility="Visible" Click="ToConvertor" Width="75"/>
+    </Grid>
+</Page>
